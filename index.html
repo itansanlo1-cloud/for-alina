@@ -4,18 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fff3f7">
+
 <title>Для Алины ❤️</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
 font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
 color:#3b2430;
-background:linear-gradient(160deg,#fff9fb,#ffe5ed,#fff7fa);
-overflow-x:hidden
+background:
+radial-gradient(circle at top left,#ffe1ec,transparent 35%),
+linear-gradient(160deg,#fff9fb,#ffe9f0,#fff7fa);
+overflow-x:hidden;
 }
 
 #hearts{
@@ -23,120 +32,253 @@ position:fixed;
 inset:0;
 pointer-events:none;
 overflow:hidden;
-z-index:0
+z-index:0;
 }
 
 .heart{
 position:absolute;
-bottom:-50px;
-opacity:.18;
-animation:up linear infinite
+bottom:-60px;
+opacity:.17;
+animation:up linear infinite;
 }
 
 @keyframes up{
-to{transform:translateY(-120vh) rotate(360deg)}
+to{
+transform:translateY(-120vh) rotate(360deg);
+}
 }
 
-main{position:relative;z-index:1}
+main{
+position:relative;
+z-index:1;
+}
 
 section{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:28px 18px
+padding:28px 18px;
 }
 
 .card{
 width:100%;
 max-width:720px;
-padding:34px 24px;
+padding:34px 22px;
 border-radius:32px;
-background:rgba(255,255,255,.84);
-box-shadow:0 20px 60px rgba(100,40,60,.15);
-text-align:center
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(10px);
+box-shadow:0 20px 60px rgba(112,44,67,.15);
+text-align:center;
+
+opacity:0;
+transform:translateY(35px);
+transition:.9s ease;
+}
+
+.card.show{
+opacity:1;
+transform:none;
 }
 
 .bigheart{
 font-size:70px;
-animation:beat 1.6s ease-in-out infinite
+animation:beat 1.6s ease-in-out infinite;
 }
 
 @keyframes beat{
-50%{transform:scale(1.12)}
+50%{
+transform:scale(1.12);
+}
 }
 
 .small{
-font-size:13px;
-letter-spacing:.18em;
+font-size:12px;
+letter-spacing:.19em;
 font-weight:900;
 color:#ec4f79;
-text-transform:uppercase
+text-transform:uppercase;
 }
 
 h1{
-font-size:60px;
-margin:12px 0 18px
+font-size:58px;
+margin:10px 0 18px;
 }
 
 h2{
-font-size:38px;
-margin:10px 0 20px
+font-size:36px;
+margin:10px 0 18px;
 }
 
 p{
 font-size:18px;
-line-height:1.7
+line-height:1.65;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
+margin-top:18px;
 padding:15px 25px;
 border:0;
 border-radius:999px;
-background:linear-gradient(135deg,#ec4f79,#ff8faa);
-color:white;
-font-size:18px;
+background:linear-gradient(135deg,#ec4f79,#ff91ad);
+color:#fff;
+font-size:17px;
 font-weight:800;
 text-decoration:none;
-box-shadow:0 12px 25px rgba(236,79,121,.28);
-cursor:pointer
-}
-
-.moment{
-margin:15px 0;
-padding:20px;
-border-radius:22px;
-background:#fff5f8;
-text-align:left
-}
-
-.date{
-font-weight:900;
-color:#ec4f79
+box-shadow:0 12px 28px rgba(236,79,121,.27);
+cursor:pointer;
 }
 
 .quote{
-margin:20px 0;
-padding:22px;
+margin:22px 0;
+padding:21px;
 border-radius:22px;
 background:#fff0f5;
 font-family:Georgia,serif;
 font-style:italic;
-font-size:21px;
-line-height:1.5
+font-size:20px;
+line-height:1.55;
+}
+
+.photo{
+width:100%;
+display:block;
+margin:22px auto;
+border-radius:25px;
+box-shadow:0 17px 38px rgba(70,30,45,.18);
+}
+
+.photo.portrait{
+max-width:480px;
+}
+
+.polaroid{
+margin:25px auto;
+max-width:510px;
+padding:10px 10px 28px;
+background:#fff;
+border-radius:9px;
+box-shadow:0 17px 40px rgba(50,20,30,.17);
+transform:rotate(-1.5deg);
+}
+
+.polaroid img{
+width:100%;
+border-radius:5px;
+display:block;
+}
+
+.polaroid span{
+display:block;
+margin-top:15px;
+font-family:Georgia,serif;
+font-size:17px;
+}
+
+.memory{
+padding:18px;
+margin:16px 0;
+background:#fff5f8;
+border-radius:22px;
+}
+
+.memory-title{
+font-weight:900;
+color:#ec4f79;
+font-size:19px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:18px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+box-shadow:0 9px 22px rgba(60,25,38,.12);
+}
+
+.video{
+width:100%;
+max-width:480px;
+margin:22px auto 8px;
+display:block;
+border-radius:24px;
+box-shadow:0 18px 40px rgba(50,20,30,.18);
+background:#000;
 }
 
 .secret{
 display:none;
-margin-top:22px;
+margin-top:20px;
 padding:22px;
 border-radius:22px;
 background:#ffe7ef;
-font-size:21px;
-font-weight:900
+font-size:19px;
+font-weight:800;
+animation:pop .6s ease;
 }
+
+@keyframes pop{
+from{
+opacity:0;
+transform:scale(.9);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.final-photo{
+position:relative;
+margin:25px auto;
+max-width:520px;
+}
+
+.final-photo img{
+width:100%;
+display:block;
+border-radius:28px;
+box-shadow:0 20px 48px rgba(80,25,45,.2);
+}
+
+.caption{
+font-size:14px;
+opacity:.65;
+margin-top:9px;
+}
+
+@media(max-width:600px){
+
+h1{
+font-size:50px;
+}
+
+h2{
+font-size:31px;
+}
+
+p{
+font-size:17px;
+}
+
+.card{
+padding:30px 18px;
+}
+
+.gallery img{
+height:170px;
+}
+
+}
+
 </style>
 </head>
 
@@ -160,11 +302,14 @@ font-weight:900
 </p>
 
 <p>
-Я собрал здесь несколько моментов, которые почему-то стали
-для меня важнее, чем я ожидал.
+Я собрал здесь несколько моментов,
+которые почему-то стали для меня
+важнее, чем я ожидал.
 </p>
 
-<a class="btn" href="#start">Открыть историю</a>
+<a class="btn" href="#start">
+Открыть историю
+</a>
 
 </div>
 </section>
@@ -173,25 +318,40 @@ font-weight:900
 <section id="start">
 <div class="card">
 
-<div class="small">страница 1</div>
+<div class="small">с этого всё началось</div>
 
-<h2>15 августа</h2>
+<h2>15 августа ❤️</h2>
 
 <p>
 <b>День, когда в моей жизни появилась ты.</b>
 </p>
 
 <p>
-Тогда я ещё не знал, сколько эмоций, улыбок,
+Тогда я ещё не знал,
+сколько эмоций, улыбок,
 ожиданий и мыслей ты принесёшь с собой.
 </p>
 
-<div class="quote">
-Иногда один обычный день становится началом
-чего-то совсем не обычного.
+<div class="polaroid">
+
+<img
+src="IMG_20260915_012537_781.jpg"
+alt="Наше фото">
+
+<span>
+Одно фото. А воспоминаний уже намного больше.
+</span>
+
 </div>
 
-<a class="btn" href="#moments">Дальше ❤️</a>
+<div class="quote">
+Иногда один обычный день
+становится началом чего-то совсем не обычного.
+</div>
+
+<a class="btn" href="#moments">
+Наши моменты ❤️
+</a>
 
 </div>
 </section>
@@ -200,45 +360,72 @@ font-weight:900
 <section id="moments">
 <div class="card">
 
-<div class="small">страница 2</div>
+<div class="small">немного нас</div>
 
 <h2>Наши моменты</h2>
 
-<div class="moment">
+<div class="memory">
 
-<div class="date">Парк и аттракционы</div>
+<div class="memory-title">
+Парк, аттракционы и эмоции 🎢
+</div>
 
 <p>
-Пиратский корабль, американские горки,
-эмоции, смех и тот самый день,
-который я до сих пор вспоминаю с улыбкой.
+Пиратский корабль,
+американские горки,
+смех и тот самый день,
+который я до сих пор вспоминаю.
 </p>
 
 </div>
 
-<div class="moment">
+<div class="memory">
 
-<div class="date">Караоке</div>
+<div class="memory-title">
+Караоке 🎤
+</div>
 
 <p>
-Песни, разговоры и ещё один вечер,
+Песни, разговоры
+и ещё один вечер,
 который стал частью нашей маленькой истории.
 </p>
 
 </div>
 
-<div class="moment">
+<div class="memory">
 
-<div class="date">И да… 😅</div>
+<div class="memory-title">
+И да… мои опоздания 😅
+</div>
 
 <p>
-Даже мои опоздания каким-то образом
+Каким-то образом даже они
 успели стать частью всего этого.
 </p>
 
 </div>
 
-<a class="btn" href="#flowers">Дальше 🤭</a>
+<div class="gallery">
+
+<img src="IMG_20260915_012536_525.jpg" alt="Мы">
+
+<img src="IMG_20260915_012534_742.jpg" alt="Мы">
+
+<img src="IMG_20260915_012532_664.jpg" alt="Мы">
+
+<img src="IMG_20260915_012557_472.jpg" alt="Мы">
+
+</div>
+
+<p class="caption">
+Не все фотографии обязаны быть идеальными,
+чтобы момент был важным ❤️
+</p>
+
+<a class="btn" href="#flowers">
+Дальше 🤭
+</a>
 
 </div>
 </section>
@@ -247,31 +434,93 @@ font-weight:900
 <section id="flowers">
 <div class="card">
 
-<div class="small">страница 3</div>
+<div class="small">маленькие вещи</div>
 
-<h2>Маленькие вещи ❤️</h2>
+<h2>Мне просто нравится тебя радовать ❤️</h2>
+
+<img
+class="photo"
+src="IMG_20260915_012518_473.jpg"
+alt="Цветы">
 
 <p>
 Цветы, сюрпризы, подарки…
 </p>
 
 <p>
-Мне нравится делать это не потому,
-что «надо».
+Не потому что «надо».
 </p>
 
 <div class="quote">
-Ты заслуживаешь цветов не только по особому поводу,
+Ты заслуживаешь цветов
+не только по особому поводу,
 а просто потому, что ты — ты.
 </div>
 
+<img
+class="photo portrait"
+src="IMG_20260915_013318_845.jpg"
+alt="Алина с цветами">
+
 <p>
-Мне просто нравится мысль,
-что я могу сделать твой день
-хоть чуточку приятнее.
+А самое приятное —
+видеть тебя с ними.
 </p>
 
-<a class="btn" href="#you">Ещё дальше ❤️</a>
+<h3 style="margin-top:30px">
+А вот один маленький момент 🎥
+</h3>
+
+<video
+class="video"
+controls
+playsinline
+preload="metadata">
+
+<source
+src="VID_20260915_012513_405.mp4"
+type="video/mp4">
+
+</video>
+
+<p class="caption">
+Вот ради таких моментов всё и затевалось 🤭❤️
+</p>
+
+<a class="btn" href="#littlethings">
+Есть ещё кое-что…
+</a>
+
+</div>
+</section>
+
+
+<section id="littlethings">
+<div class="card">
+
+<div class="small">те самые мелочи</div>
+
+<h2>Немного нестандартно 😂❤️</h2>
+
+<img
+class="photo portrait"
+src="IMG_20260915_012522_444.jpg"
+alt="Сердечки">
+
+<p>
+Иногда мои способы тебя порадовать
+были немного… необычными.
+</p>
+
+<p>
+Но, кажется,
+даже деньги рядом с тобой
+каким-то образом превращаются в сердечки 😂❤️
+</p>
+
+<a class="btn" href="#you">
+Дальше
+</a>
 
 </div>
 </section>
@@ -280,7 +529,7 @@ font-weight:900
 <section id="you">
 <div class="card">
 
-<div class="small">страница 4</div>
+<div class="small">чуть серьёзнее</div>
 
 <h2>Что мне в тебе нравится</h2>
 
@@ -290,9 +539,11 @@ font-weight:900
 </p>
 
 <p>
-Даже когда ты устаёшь,
-отвечаешь коротко или когда
-я сам начинаю слишком много думать 😄
+Мне нравится твоя улыбка,
+твои реакции,
+наши разговоры
+и даже моменты,
+когда я начинаю слишком много думать 😄
 </p>
 
 <p>
@@ -301,12 +552,13 @@ font-weight:900
 </p>
 
 <p>
-И человеком, о котором могу неожиданно
-вспомнить посреди самого обычного дня.
+И человеком,
+о котором могу неожиданно вспомнить
+посреди самого обычного дня.
 </p>
 
 <a class="btn" href="#truth">
-Есть ещё кое-что…
+Без красивых слов ❤️
 </a>
 
 </div>
@@ -316,7 +568,7 @@ font-weight:900
 <section id="truth">
 <div class="card">
 
-<div class="small">страница 5</div>
+<div class="small">просто как есть</div>
 
 <h2>Без красивых слов</h2>
 
@@ -331,7 +583,8 @@ font-weight:900
 
 <p>
 Мне важнее продолжать узнавать тебя,
-видеть тебя, смеяться вместе
+видеть тебя,
+смеяться вместе
 и собирать новые моменты.
 </p>
 
@@ -353,21 +606,32 @@ font-weight:900
 </h2>
 
 <p>
-Не потому что сегодня какой-то особенный день.
+Не потому что сегодня
+какой-то особенный день.
 </p>
 
 <p>
-Просто мне захотелось ещё одним способом
-напомнить тебе, насколько особенным человеком
+Просто мне захотелось
+ещё одним способом напомнить тебе,
+насколько особенным человеком
 ты стала для меня.
 </p>
+
+<div class="final-photo">
+
+<img
+src="IMG_20260915_012537_781.jpg"
+alt="Мы">
+
+</div>
 
 <p>
 Мне нравится всё,
 что уже успело случиться между нами:
 смешное, странное, хорошее
 и даже моменты,
-когда мы друг друга не совсем понимали.
+когда мы друг друга
+не совсем понимали.
 </p>
 
 <p>
@@ -376,26 +640,43 @@ font-weight:900
 в нашей истории…
 </p>
 
-<p style="font-size:22px">
+<p style="font-size:23px;margin-top:25px">
 <b>
 Но очень хочу их увидеть вместе с тобой. ❤️
 </b>
 </p>
 
-<p style="font-size:21px;margin-top:28px">
-<b>Твой Ибрагим</b>
+<p style="font-size:21px;margin-top:30px">
+<b>
+Твой Ибрагим
+</b>
 </p>
 
-<button class="btn" onclick="secret()">
+<button
+class="btn"
+onclick="secret()">
+
 Нажми, если дочитала 🤭
+
 </button>
 
-<div class="secret" id="secret">
+<div
+class="secret"
+id="secret">
+
 Ну всё… теперь можешь написать мне:
+<br><br>
+
 «дурак» 😂❤️
+
+<br><br>
+
+А если серьёзно —
+спасибо, что дочитала до конца.
+
 </div>
 
-<p style="font-size:13px;opacity:.55;margin-top:25px">
+<p style="font-size:13px;opacity:.55;margin-top:28px">
 15.08 — начало нашей маленькой истории
 </p>
 
@@ -406,41 +687,88 @@ font-weight:900
 
 <script>
 
-const box=document.getElementById("hearts");
+const box =
+document.getElementById("hearts");
 
-const hearts=["❤","♡","💕","💗"];
+const hearts =
+["❤","♡","💕","💗","💞"];
 
-for(let i=0;i<24;i++){
+for(let i=0;i<28;i++){
 
-let h=document.createElement("div");
+const h =
+document.createElement("div");
 
 h.className="heart";
 
-h.textContent=
-hearts[Math.floor(Math.random()*hearts.length)];
+h.textContent =
+hearts[
+Math.floor(
+Math.random()*hearts.length
+)
+];
 
-h.style.left=Math.random()*100+"vw";
+h.style.left =
+Math.random()*100+"vw";
 
-h.style.fontSize=
-(15+Math.random()*25)+"px";
+h.style.fontSize =
+(14+Math.random()*26)+"px";
 
-h.style.animationDuration=
-(8+Math.random()*10)+"s";
+h.style.animationDuration =
+(8+Math.random()*11)+"s";
 
-h.style.animationDelay=
-(-Math.random()*15)+"s";
+h.style.animationDelay =
+(-Math.random()*18)+"s";
 
 box.appendChild(h);
 
 }
 
+
+const cards =
+document.querySelectorAll(".card");
+
+const observer =
+new IntersectionObserver(
+entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+{
+threshold:.14
+}
+);
+
+cards.forEach(card=>{
+observer.observe(card);
+});
+
+
 function secret(){
 
-document.getElementById("secret").style.display="block";
+const s =
+document.getElementById("secret");
+
+s.style.display="block";
+
+setTimeout(()=>{
+s.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+},100);
 
 }
 
 </script>
 
 </body>
-  </html>
+</html>
