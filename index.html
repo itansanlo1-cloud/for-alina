@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff3f7">
+<title>Для Алины ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+color:#3b2430;
+background:linear-gradient(160deg,#fff9fb,#ffe5ed,#fff7fa);
+overflow-x:hidden
+}
+
+#hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:0
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+opacity:.18;
+animation:up linear infinite
+}
+
+@keyframes up{
+to{transform:translateY(-120vh) rotate(360deg)}
+}
+
+main{position:relative;z-index:1}
+
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:28px 18px
+}
+
+.card{
+width:100%;
+max-width:720px;
+padding:34px 24px;
+border-radius:32px;
+background:rgba(255,255,255,.84);
+box-shadow:0 20px 60px rgba(100,40,60,.15);
+text-align:center
+}
+
+.bigheart{
+font-size:70px;
+animation:beat 1.6s ease-in-out infinite
+}
+
+@keyframes beat{
+50%{transform:scale(1.12)}
+}
+
+.small{
+font-size:13px;
+letter-spacing:.18em;
+font-weight:900;
+color:#ec4f79;
+text-transform:uppercase
+}
+
+h1{
+font-size:60px;
+margin:12px 0 18px
+}
+
+h2{
+font-size:38px;
+margin:10px 0 20px
+}
+
+p{
+font-size:18px;
+line-height:1.7
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 25px;
+border:0;
+border-radius:999px;
+background:linear-gradient(135deg,#ec4f79,#ff8faa);
+color:white;
+font-size:18px;
+font-weight:800;
+text-decoration:none;
+box-shadow:0 12px 25px rgba(236,79,121,.28);
+cursor:pointer
+}
+
+.moment{
+margin:15px 0;
+padding:20px;
+border-radius:22px;
+background:#fff5f8;
+text-align:left
+}
+
+.date{
+font-weight:900;
+color:#ec4f79
+}
+
+.quote{
+margin:20px 0;
+padding:22px;
+border-radius:22px;
+background:#fff0f5;
+font-family:Georgia,serif;
+font-style:italic;
+font-size:21px;
+line-height:1.5
+}
+
+.secret{
+display:none;
+margin-top:22px;
+padding:22px;
+border-radius:22px;
+background:#ffe7ef;
+font-size:21px;
+font-weight:900
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<main>
+
+<section>
+<div class="card">
+
+<div class="bigheart">❤️</div>
+
+<div class="small">маленький сюрприз</div>
+
+<h1>Алина</h1>
+
+<p>
+Раз уж ты сюда попала… назад дороги уже нет 🤭
+</p>
+
+<p>
+Я собрал здесь несколько моментов, которые почему-то стали
+для меня важнее, чем я ожидал.
+</p>
+
+<a class="btn" href="#start">Открыть историю</a>
+
+</div>
+</section>
+
+
+<section id="start">
+<div class="card">
+
+<div class="small">страница 1</div>
+
+<h2>15 августа</h2>
+
+<p>
+<b>День, когда в моей жизни появилась ты.</b>
+</p>
+
+<p>
+Тогда я ещё не знал, сколько эмоций, улыбок,
+ожиданий и мыслей ты принесёшь с собой.
+</p>
+
+<div class="quote">
+Иногда один обычный день становится началом
+чего-то совсем не обычного.
+</div>
+
+<a class="btn" href="#moments">Дальше ❤️</a>
+
+</div>
+</section>
+
+
+<section id="moments">
+<div class="card">
+
+<div class="small">страница 2</div>
+
+<h2>Наши моменты</h2>
+
+<div class="moment">
+
+<div class="date">Парк и аттракционы</div>
+
+<p>
+Пиратский корабль, американские горки,
+эмоции, смех и тот самый день,
+который я до сих пор вспоминаю с улыбкой.
+</p>
+
+</div>
+
+<div class="moment">
+
+<div class="date">Караоке</div>
+
+<p>
+Песни, разговоры и ещё один вечер,
+который стал частью нашей маленькой истории.
+</p>
+
+</div>
+
+<div class="moment">
+
+<div class="date">И да… 😅</div>
+
+<p>
+Даже мои опоздания каким-то образом
+успели стать частью всего этого.
+</p>
+
+</div>
+
+<a class="btn" href="#flowers">Дальше 🤭</a>
+
+</div>
+</section>
+
+
+<section id="flowers">
+<div class="card">
+
+<div class="small">страница 3</div>
+
+<h2>Маленькие вещи ❤️</h2>
+
+<p>
+Цветы, сюрпризы, подарки…
+</p>
+
+<p>
+Мне нравится делать это не потому,
+что «надо».
+</p>
+
+<div class="quote">
+Ты заслуживаешь цветов не только по особому поводу,
+а просто потому, что ты — ты.
+</div>
+
+<p>
+Мне просто нравится мысль,
+что я могу сделать твой день
+хоть чуточку приятнее.
+</p>
+
+<a class="btn" href="#you">Ещё дальше ❤️</a>
+
+</div>
+</section>
+
+
+<section id="you">
+<div class="card">
+
+<div class="small">страница 4</div>
+
+<h2>Что мне в тебе нравится</h2>
+
+<p>
+Мне нравится узнавать тебя —
+постепенно, без спешки.
+</p>
+
+<p>
+Даже когда ты устаёшь,
+отвечаешь коротко или когда
+я сам начинаю слишком много думать 😄
+</p>
+
+<p>
+Ты стала человеком,
+чьё сообщение я замечаю сразу.
+</p>
+
+<p>
+И человеком, о котором могу неожиданно
+вспомнить посреди самого обычного дня.
+</p>
+
+<a class="btn" href="#truth">
+Есть ещё кое-что…
+</a>
+
+</div>
+</section>
+
+
+<section id="truth">
+<div class="card">
+
+<div class="small">страница 5</div>
+
+<h2>Без красивых слов</h2>
+
+<p>
+Мне просто хорошо от того,
+что ты есть в моей жизни.
+</p>
+
+<p>
+Я не хочу торопить события.
+</p>
+
+<p>
+Мне важнее продолжать узнавать тебя,
+видеть тебя, смеяться вместе
+и собирать новые моменты.
+</p>
+
+<a class="btn" href="#final">
+Последняя страница ❤️
+</a>
+
+</div>
+</section>
+
+
+<section id="final">
+<div class="card">
+
+<div class="bigheart">❤️</div>
+
+<h2>
+Знаешь, зачем я всё это сделал?
+</h2>
+
+<p>
+Не потому что сегодня какой-то особенный день.
+</p>
+
+<p>
+Просто мне захотелось ещё одним способом
+напомнить тебе, насколько особенным человеком
+ты стала для меня.
+</p>
+
+<p>
+Мне нравится всё,
+что уже успело случиться между нами:
+смешное, странное, хорошее
+и даже моменты,
+когда мы друг друга не совсем понимали.
+</p>
+
+<p>
+Я не знаю,
+сколько ещё страниц будет
+в нашей истории…
+</p>
+
+<p style="font-size:22px">
+<b>
+Но очень хочу их увидеть вместе с тобой. ❤️
+</b>
+</p>
+
+<p style="font-size:21px;margin-top:28px">
+<b>Твой Ибрагим</b>
+</p>
+
+<button class="btn" onclick="secret()">
+Нажми, если дочитала 🤭
+</button>
+
+<div class="secret" id="secret">
+Ну всё… теперь можешь написать мне:
+«дурак» 😂❤️
+</div>
+
+<p style="font-size:13px;opacity:.55;margin-top:25px">
+15.08 — начало нашей маленькой истории
+</p>
+
+</div>
+</section>
+
+</main>
+
+<script>
+
+const box=document.getElementById("hearts");
+
+const hearts=["❤","♡","💕","💗"];
+
+for(let i=0;i<24;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.textContent=
+hearts[Math.floor(Math.random()*hearts.length)];
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=
+(15+Math.random()*25)+"px";
+
+h.style.animationDuration=
+(8+Math.random()*10)+"s";
+
+h.style.animationDelay=
+(-Math.random()*15)+"s";
+
+box.appendChild(h);
+
+}
+
+function secret(){
+
+document.getElementById("secret").style.display="block";
+
+}
+
+</script>
+
+</body>
+  </html>
