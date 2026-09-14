@@ -758,9 +758,26 @@ behavior:"smooth",
 block:"center"
 });
 },100);
+for(let i=0;i<22;i++){
+const h=document.createElement("div");
+h.textContent=["❤️","💕","💗","💖"][Math.floor(Math.random()*4)];
+h.style.position="fixed";
+h.style.left=Math.random()*100+"vw";
+h.style.top="-40px";
+h.style.fontSize=(20+Math.random()*22)+"px";
+h.style.zIndex="9999";
+h.style.pointerEvents="none";
+h.style.transition="transform 3s ease, opacity 3s ease";
+document.body.appendChild(h);
 
+setTimeout(()=>{
+h.style.transform="translateY(110vh) rotate(360deg)";
+h.style.opacity="0";
+},50);
+
+setTimeout(()=>h.remove(),3200);
 }
-
+}
 </script>
 
 </body>
